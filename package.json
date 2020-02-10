@@ -1,0 +1,15 @@
+{
+  "name": "billinearcalc",
+  "version": "1.0.0",
+  "description": "A tool used to calculate information about integer billinear sequences modulo an integer m",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "Max Stoumen",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^6.6.0"
+  }
+}
