@@ -99,8 +99,6 @@ function findCompleteSequences(m) {
   return out
 }
 
-//out += "\n\n"
-//out += "Found " + completeSets.length + " complete sets of residue classes."
 let start = Date.now()
 console.log("Iterating through sequences...")
 
@@ -108,14 +106,14 @@ let results = findCompleteSequences(8)
 
 console.log("Done. Found " + results.completeSets.length + " complete sets of residue classes in " + (Date.now() - start)/1000 + "s" )
 
-let readableStr = genTextLog(results) //TODO: do this properly
+let readableStr = genTextLog(results)
 let tex = genTexTable(results)
 let resultStr = JSON.stringify(results)
+
+console.log("\nWriting results to disk...")
 
 fs.writeFileSync('out.json', resultStr);
 fs.writeFileSync('out.txt', readableStr);
 fs.writeFileSync('out.tex', tex);
 
-console.log()
-
-//console.log(isResidueClass(func(1, 2, 0, 1), m))
+console.log("Successfully wrote results to disk.")
